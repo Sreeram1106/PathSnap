@@ -17,12 +17,12 @@ raw .track/.nodes/.arcs ──► cleaning + local metric projection
 | Folder | What is inside |
 |---|---|
 | `pathsnap/` | Library code: `data_io.py` (reading/cleaning), `geo.py` (projection, geometry), `network.py` (spatial index, Dijkstra), `labels.py` (route→observation label alignment), `features.py` (candidates + feature engineering), `models.py` (model zoo), `hmm.py` (HMM/Viterbi + route reconstruction), `metrics.py`, `pipeline.py` (inference + server-side evaluation) |
-| `scripts/` | Numbered, reproducible experiment scripts (see below) |
+| `scripts/` | Numbered, reproducible experiment scripts (see below); `scripts/models/train_<model>.py` trains one model at a time |
 | `api/` | FastAPI backend (`api/main.py`), runs on **Laptop 1** |
 | `ui/` | Streamlit evaluator interface (`ui/app.py`), runs on **Laptop 2** |
 | `models/` | `final_model.joblib` (tuned LightGBM), `final_model.json` (features, params, metrics), `decoder_config.json` (HMM parameters), `experiments/` (the other compared models) |
 | `results/eda/` | Dataset inventory, summary statistics, data-quality record, EDA plots |
-| `results/models/` | Per-fold CV results, model comparison table, confusion matrices, MLP epoch history |
+| `results/models/` | **[Model comparison page](results/models/README.md)**, one folder per model in `per_model/` (results, confusion matrix, fold scores), per-fold CV results, MLP epoch history |
 | `results/optuna/` | Bayesian search record (`optuna_study.db`, `optuna_trials.csv`), best params, tuned vs untuned, learning curve |
 | `results/hmm/` | Decoder grid search, classifier-only vs HMM per student-test trip |
 | `results/maps/` | Interactive Folium HTML maps (EDA + predictions) |
@@ -63,6 +63,7 @@ python scripts/04_bayes_opt.py 25       # Optuna TPE search on LightGBM, final m
 python scripts/05_hmm_eval.py           # decoder tuning + classifier-only vs HMM
 python scripts/06_maps.py               # Folium maps of predictions on student-test trips
 python scripts/07_plots.py              # comparison plots
+python scripts/08_model_cards.py        # one results page per model + comparison page
 python report/build_report.py           # technical report PDF
 ```
 
