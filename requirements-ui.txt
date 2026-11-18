@@ -1,0 +1,4 @@
+# Laptop 2 (evaluator UI only). Python 3.10+
+streamlit>=1.40
+requests>=2.32
+folium>=0.18

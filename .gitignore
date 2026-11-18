@@ -1,0 +1,10 @@
+.venv/
+__pycache__/
+*.pyc
+# raw dataset is distributed by the organisers -> not redistributed here
+data/raw/
+# derived tables are large and fully reproducible with scripts/02_build_dataset.py
+data/processed/
+logs/api.log
+.streamlit/secrets.toml
+.env
