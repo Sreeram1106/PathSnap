@@ -1,0 +1,7 @@
+{
+  "beta": 2.0,
+  "emis_w": 1.0,
+  "gap_s": 60.0,
+  "back_tol": 25.0,
+  "cutoff_extra": 200.0
+}
