@@ -69,6 +69,17 @@ python report/build_report.py           # technical report PDF
 
 All randomness is seeded (`SEED = 42` in `pathsnap/config.py`). Cross-validation groups by trip, so no trip appears in two folds. The evaluator partition is never used for training, feature selection, tuning or decoder settings.
 
+## 2b. Live demo (VS Code terminal)
+
+```bash
+.venv\Scriptsctivate
+python scripts/live_demo.py models          # ~40 s: builds features live, runs all 7 saved models + tuned LightGBM + HMM on the 10 student-test trips, prints the ranked table
+python scripts/live_demo.py trip 00000065   # ~10 s: full pipeline on one trip, prints accuracy, opens the Folium map
+python scripts/live_demo.py mlp             # MLP epoch-wise train/validation loss + graph
+python scripts/03b_mlp_history.py           # retrain the MLP live, one line per epoch (~2-3 min)
+python scripts/models/train_lightgbm.py     # retrain one model with 5-fold CV (LightGBM ~1 min; KNN/MLP several minutes)
+```
+
 ## 3. Deployment on two laptops
 
 | Laptop | Runs | Needs |
