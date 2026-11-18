@@ -113,3 +113,35 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+
+def selection_summary():
+    """One picture for model selection: the 7 models, tuned LightGBM and tuned LightGBM + HMM."""
+    sm = pd.read_csv(M / "model_comparison.csv").sort_values("st_top1_acc")
+    tv = pd.read_csv(O / "tuned_vs_untuned.csv").set_index("model")
+    hs = json.load(open(H / "student_test_summary.json"))
+    tuned = tv.loc["LightGBM (Bayes-tuned)"]
+    names = sm.model.tolist() + ["LightGBM\n(Bayes-tuned)", "LightGBM tuned\n+ HMM/Viterbi"]
+    st = sm.st_top1_acc.tolist() + [tuned.st_top1_acc, hs["top1_hmm"]]
+    cv = sm.cv_top1_mean.tolist() + [tuned.cv_top1, np.nan]
+    cvsd = sm.cv_top1_std.tolist() + [np.nan, np.nan]
+    colors = ["#9aa5b1"] * len(sm) + ["#1f77b4", "#d62728"]
+    colors[names.index("LightGBM")] = "#6baed6"
+    fig, ax = plt.subplots(1, 2, figsize=(14, 4.8))
+    b = ax[0].bar(range(len(names)), st, color=colors)
+    ax[0].bar_label(b, fmt="%.3f", fontsize=8)
+    ax[0].set_xticks(range(len(names)), names, rotation=35, ha="right", fontsize=8)
+    ax[0].set_ylim(0.6, 1.0); ax[0].set_ylabel("Top-1 accuracy")
+    ax[0].set_title("Student-test Top-1 accuracy (10 trips)")
+    n = len(sm) + 1
+    b = ax[1].bar(range(n), cv[:n], yerr=cvsd[:n], capsize=3, color=colors[:n])
+    ax[1].bar_label(b, fmt="%.3f", fontsize=8, padding=6)
+    ax[1].set_xticks(range(n), names[:n], rotation=35, ha="right", fontsize=8)
+    ax[1].set_ylim(0.6, 0.95); ax[1].set_ylabel("Top-1 accuracy (mean ± sd)")
+    ax[1].set_title("5-fold GroupKFold CV Top-1 (80 training trips)")
+    fig.suptitle("Model selection: LightGBM is best on student-test, tied best on CV, and best on both after tuning")
+    save(fig, "model_selection_summary.png")
+
+
+if __name__ == "__main__":
+    selection_summary()

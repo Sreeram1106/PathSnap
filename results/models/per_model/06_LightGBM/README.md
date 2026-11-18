@@ -75,6 +75,8 @@ configuration is only the library default.
 Both produce well-calibrated probabilities (similar log loss), which the HMM uses as emissions. LightGBM was
 selected and taken forward to Bayesian optimisation. Training accuracy was not used for the decision.
 
+![model selection summary](model_selection_summary.png)
+
 ## Bayesian hyper-parameter optimisation (Optuna TPE)
 Objective: mean 3-fold GroupKFold observation Top-1 accuracy (80 train trips). Trials: 25. Best 3-fold CV Top-1: 0.8699.
 

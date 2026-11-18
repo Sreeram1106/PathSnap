@@ -155,7 +155,7 @@ def main():
             bp = json.load(open(O / "best_params.json"))
             for fn_ in ("optuna_history.png",):
                 shutil.copy(O / fn_, d / fn_)
-            for fn_ in ("tuned_vs_untuned.png", "lgbm_learning_curve.png"):
+            for fn_ in ("tuned_vs_untuned.png", "lgbm_learning_curve.png", "model_selection_summary.png"):
                 shutil.copy(PLOTS / fn_, d / fn_)
             t2 = tv[["model", "cv_f1_macro", "cv_top1", "cv_log_loss", "st_top1_acc", "st_f1_macro", "st_log_loss",
                      "st_route_continuity", "fit_time_s", "inference_ms_per_obs"]]
@@ -165,6 +165,7 @@ def main():
             dec = json.load(open(ROOT / "models" / "decoder_config.json"))
             lines += [
                 "", "## Why it was selected", strip(T.sec3_selection(ctx)),
+                "", "![model selection summary](model_selection_summary.png)",
                 "", "## Bayesian hyper-parameter optimisation (Optuna TPE)",
                 f"Objective: {bp['objective']}. Trials: {bp['n_trials']}. "
                 f"Best 3-fold CV Top-1: {bp['best_value']:.4f}.", "",
@@ -206,6 +207,8 @@ def main():
         "**Top-1 accuracy** (the highest-scoring candidate per GPS point is the true arc). Click a model for its full page.",
         "",
         md_table(tab),
+        "",
+        "![Model selection summary](../plots/model_selection_summary.png)",
         "",
         f"**Ranking by student-test Top-1:** {' > '.join(best)}.  ",
         "**Selected:** LightGBM. It is tied with Random Forest on CV, but it is better on student-test, faster and smaller. "

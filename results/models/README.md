@@ -12,6 +12,8 @@ Every model is a binary classifier over (GPS observation, candidate road arc) pa
 | 6 | [LightGBM](per_model/06_LightGBM) | Boosting | 0.9269 ± 0.0158 | 0.8648 ± 0.0308 | 0.8941 | 0.9361 | 0.0727 | 0.9510 | 3.8373 | 0.0090 |
 | 7 | [MLP](per_model/07_MLP) | Neural network | 0.9233 ± 0.0171 | 0.8606 ± 0.0329 | 0.8783 | 0.9270 | 0.0783 | 0.9510 | 23.2745 | 0.0039 |
 
+![Model selection summary](../plots/model_selection_summary.png)
+
 **Ranking by student-test Top-1:** LightGBM > DecisionTree > RandomForest > MLP > KNN > LogisticRegression > GaussianNB.  
 **Selected:** LightGBM. It is tied with Random Forest on CV, but it is better on student-test, faster and smaller. It was then Bayes-tuned and combined with the HMM/Viterbi decoder.
 
