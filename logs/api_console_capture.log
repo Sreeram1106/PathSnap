@@ -1,0 +1,22 @@
+2026-11-18 11:29:11,897 | INFO | Model loaded: LightGBM binary classifier over (GPS observation, candidate arc) pairs | decoder: {'beta': 2.0, 'emis_w': 1.0, 'gap_s': 60.0, 'back_tol': 25.0, 'cutoff_extra': 200.0}
+2026-11-18 11:29:11,898 | INFO | Evaluation trips: D:\MLOPSU4\PathSnap\data\raw / student_test -> ['00000000', '00000007', '00000009', '00000040', '00000052', '00000056', '00000065', '00000076', '00000077', '00000091']
+INFO:     Started server process [15956]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+2026-11-18 11:29:13,307 | INFO | GET /health  from 127.0.0.1 -> 200 (8 ms)
+INFO:     127.0.0.1:59041 - "GET /health HTTP/1.1" 200 OK
+2026-11-18 11:29:13,586 | INFO | GET /trips  from 127.0.0.1 -> 200 (272 ms)
+INFO:     127.0.0.1:59042 - "GET /trips HTTP/1.1" 200 OK
+2026-11-18 11:29:13,595 | INFO | PREDICT start trip=00000065
+2026-11-18 11:29:14,021 | INFO | PREDICT done  trip=00000065 points=768 top1(HMM)=0.8984 top1(clf)=0.8659 continuity=0.9857 route_F1=0.9911 inference=0.40s total=0.42s
+2026-11-18 11:29:14,030 | INFO | POST /predict  from 127.0.0.1 -> 200 (440 ms)
+INFO:     127.0.0.1:59043 - "POST /predict HTTP/1.1" 200 OK
+2026-11-18 11:29:17,498 | INFO | GET /health  from 127.0.0.1 -> 200 (2 ms)
+INFO:     127.0.0.1:59071 - "GET /health HTTP/1.1" 200 OK
+2026-11-18 11:29:17,689 | INFO | GET /trips  from 127.0.0.1 -> 200 (181 ms)
+INFO:     127.0.0.1:59072 - "GET /trips HTTP/1.1" 200 OK
+2026-11-18 11:29:17,697 | INFO | PREDICT start trip=00000065
+2026-11-18 11:29:18,063 | INFO | PREDICT done  trip=00000065 points=768 top1(HMM)=0.8984 top1(clf)=0.8659 continuity=0.9857 route_F1=0.9911 inference=0.33s total=0.36s
+2026-11-18 11:29:18,080 | INFO | POST /predict  from 127.0.0.1 -> 200 (384 ms)
+INFO:     127.0.0.1:59073 - "POST /predict HTTP/1.1" 200 OK

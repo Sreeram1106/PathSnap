@@ -63,7 +63,8 @@ if res:
     c[4].metric("API inference time", f"{res['timings_s']['inference_total']:.2f} s")
 
     gps = res["gps_points"]
-    fmap = folium.Map(location=gps[len(gps) // 2], zoom_start=14, tiles="OpenStreetMap", control_scale=True)
+    fmap = folium.Map(location=gps[len(gps) // 2], zoom_start=14, tiles="OpenStreetMap", control_scale=True,
+                      width="100%", height=590)
     g1 = folium.FeatureGroup("Raw GPS observations (blue)")
     for p in gps:
         folium.CircleMarker(p, radius=2, color="#1f77b4", fill=True, fill_opacity=0.8, weight=0).add_to(g1)

@@ -24,7 +24,7 @@ from pathsnap.metrics import route_continuity, route_overlap
 
 OUT = RESULTS / "hmm"
 OUT.mkdir(parents=True, exist_ok=True)
-GRID = [dict(beta=b, emis_w=w) for b in (5.0, 10.0, 20.0, 40.0, 80.0) for w in (0.5, 1.0, 2.0)]
+GRID = [dict(beta=b, emis_w=w) for b in (2.0, 3.0, 5.0, 10.0, 20.0, 40.0, 80.0) for w in (0.25, 0.5, 1.0, 2.0)]
 
 
 def run_trip(tid, part, cands, prob_col, obs_df, configs):

@@ -129,6 +129,34 @@ curl -X POST http://<laptop1-ip>:8000/predict -H "Content-Type: application/json
 
 See `report/PathSnap_Technical_Report.pdf` for full results.
 
-## 5. AI-assistance disclosure
+## 5. Results (copied from `results/`)
+
+**Model comparison:** CV = 5-fold GroupKFold over 80 train trips; ST = 10 student-test trips; classifier only.
+
+| Model | CV Macro F1 | CV Top-1 | ST Top-1 | ST Macro F1 | ST Log loss | ST Route continuity |
+|---|---|---|---|---|---|---|
+| Logistic Regression | 0.9041 | 0.8424 | 0.8537 | 0.9059 | 0.1076 | 0.9413 |
+| Gaussian NB | 0.8157 | 0.6735 | 0.6864 | 0.8138 | 1.0412 | 0.8910 |
+| KNN (k=31) | 0.9108 | 0.8459 | 0.8660 | 0.9167 | 0.1153 | 0.9391 |
+| Decision Tree | 0.9234 | 0.8590 | 0.8891 | 0.9338 | 0.0783 | 0.9495 |
+| Random Forest | 0.9275 | 0.8651 | 0.8828 | 0.9340 | 0.0717 | 0.9541 |
+| **LightGBM** | 0.9269 | 0.8648 | **0.8941** | **0.9361** | 0.0727 | 0.9510 |
+| MLP (64,32) | 0.9233 | 0.8606 | 0.8783 | 0.9270 | 0.0783 | 0.9510 |
+
+**Bayesian optimisation** (Optuna TPE, 25 trials) of LightGBM:
+
+| | CV Macro F1 | CV Top-1 | ST Top-1 | ST Macro F1 | ST Log loss |
+|---|---|---|---|---|---|
+| Untuned | 0.9269 | 0.8648 | 0.8941 | 0.9361 | 0.0727 |
+| Tuned | 0.9282 | 0.8661 | 0.8991 | 0.9385 | 0.0674 |
+
+**HMM/Viterbi** (10 student-test trips):
+
+| | Top-1 | Route continuity | Route F1 (length-weighted) |
+|---|---|---|---|
+| Classifier only | 0.8999 | 0.9538 | 0.8764 |
+| Classifier + HMM | **0.9408** | **0.9788** | **0.9872** |
+
+## 6. AI-assistance disclosure
 
 As required by the event's policy: an AI coding assistant (Claude) helped write the code and the first draft of the report. Every experiment was actually run. All numbers, tables and plots come from the committed scripts and logs. The team has reviewed the work and must be able to explain all of it.

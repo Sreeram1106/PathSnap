@@ -1,0 +1,27 @@
+{
+  "objective": "mean 3-fold GroupKFold observation Top-1 accuracy (80 train trips)",
+  "sampler": "TPE (seed 42, 8 random start-up trials)",
+  "n_trials": 25,
+  "search_space": {
+    "n_estimators": "int [100, 600]",
+    "learning_rate": "float log [0.01, 0.3]",
+    "num_leaves": "int log [15, 255]",
+    "min_child_samples": "int log [10, 300]",
+    "subsample": "float [0.5, 1.0] (bagging_freq=1)",
+    "colsample_bytree": "float [0.5, 1.0]",
+    "reg_lambda": "float log [1e-3, 10]",
+    "reg_alpha": "float log [1e-3, 10]"
+  },
+  "best_value": 0.8699024977684778,
+  "best_params": {
+    "n_estimators": 383,
+    "learning_rate": 0.0455735674071039,
+    "num_leaves": 102,
+    "min_child_samples": 26,
+    "subsample": 0.9536287217469912,
+    "colsample_bytree": 0.9473320401542937,
+    "reg_lambda": 0.0044201188746266626,
+    "reg_alpha": 0.20111197571027345
+  },
+  "search_seconds_this_run": 1188.174610376358
+}

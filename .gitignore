@@ -8,3 +8,7 @@ data/processed/
 logs/api.log
 .streamlit/secrets.toml
 .env
+logs/*_smoke.log
+logs/*_run.log
+report/PathSnap_Technical_Report.html
+report/screenshots/api_console.html

@@ -1,0 +1,76 @@
+<python>\Lib\site-packages\sklearn\neural_network\_multilayer_perceptron.py:695: UserWarning: Got `batch_size` less than 1 or larger than sample size. It is going to be clipped
+  warnings.warn(
+train: 187878 reliable observations, 1323512 candidate rows
+{'epoch': 1, 'train_log_loss': 0.0967480187992048, 'val_log_loss': 0.12730383417985655}
+<python>\Lib\site-packages\sklearn\neural_network\_multilayer_perceptron.py:695: UserWarning: Got `batch_size` less than 1 or larger than sample size. It is going to be clipped
+  warnings.warn(
+{'epoch': 2, 'train_log_loss': 0.089730305157621, 'val_log_loss': 0.11974128892011449}
+<python>\Lib\site-packages\sklearn\neural_network\_multilayer_perceptron.py:695: UserWarning: Got `batch_size` less than 1 or larger than sample size. It is going to be clipped
+  warnings.warn(
+{'epoch': 3, 'train_log_loss': 0.08477179747638952, 'val_log_loss': 0.1158335130602451}
+<python>\Lib\site-packages\sklearn\neural_network\_multilayer_perceptron.py:695: UserWarning: Got `batch_size` less than 1 or larger than sample size. It is going to be clipped
+  warnings.warn(
+{'epoch': 4, 'train_log_loss': 0.08272625601327188, 'val_log_loss': 0.11318912947000923}
+<python>\Lib\site-packages\sklearn\neural_network\_multilayer_perceptron.py:695: UserWarning: Got `batch_size` less than 1 or larger than sample size. It is going to be clipped
+  warnings.warn(
+{'epoch': 5, 'train_log_loss': 0.08115303705668882, 'val_log_loss': 0.11259259549718313}
+<python>\Lib\site-packages\sklearn\neural_network\_multilayer_perceptron.py:695: UserWarning: Got `batch_size` less than 1 or larger than sample size. It is going to be clipped
+  warnings.warn(
+{'epoch': 6, 'train_log_loss': 0.08055089668853829, 'val_log_loss': 0.11174445153253913}
+<python>\Lib\site-packages\sklearn\neural_network\_multilayer_perceptron.py:695: UserWarning: Got `batch_size` less than 1 or larger than sample size. It is going to be clipped
+  warnings.warn(
+{'epoch': 7, 'train_log_loss': 0.078931614781154, 'val_log_loss': 0.11101175357397815}
+<python>\Lib\site-packages\sklearn\neural_network\_multilayer_perceptron.py:695: UserWarning: Got `batch_size` less than 1 or larger than sample size. It is going to be clipped
+  warnings.warn(
+{'epoch': 8, 'train_log_loss': 0.07815572074010027, 'val_log_loss': 0.1081115888371321}
+<python>\Lib\site-packages\sklearn\neural_network\_multilayer_perceptron.py:695: UserWarning: Got `batch_size` less than 1 or larger than sample size. It is going to be clipped
+  warnings.warn(
+{'epoch': 9, 'train_log_loss': 0.07696559419908552, 'val_log_loss': 0.10993791040077014}
+<python>\Lib\site-packages\sklearn\neural_network\_multilayer_perceptron.py:695: UserWarning: Got `batch_size` less than 1 or larger than sample size. It is going to be clipped
+  warnings.warn(
+{'epoch': 10, 'train_log_loss': 0.07837509869381418, 'val_log_loss': 0.11382546954601834}
+<python>\Lib\site-packages\sklearn\neural_network\_multilayer_perceptron.py:695: UserWarning: Got `batch_size` less than 1 or larger than sample size. It is going to be clipped
+  warnings.warn(
+{'epoch': 11, 'train_log_loss': 0.07578726849008978, 'val_log_loss': 0.10842707386663082}
+<python>\Lib\site-packages\sklearn\neural_network\_multilayer_perceptron.py:695: UserWarning: Got `batch_size` less than 1 or larger than sample size. It is going to be clipped
+  warnings.warn(
+{'epoch': 12, 'train_log_loss': 0.07834306921597851, 'val_log_loss': 0.11237751228570801}
+<python>\Lib\site-packages\sklearn\neural_network\_multilayer_perceptron.py:695: UserWarning: Got `batch_size` less than 1 or larger than sample size. It is going to be clipped
+  warnings.warn(
+{'epoch': 13, 'train_log_loss': 0.07578858385530425, 'val_log_loss': 0.10783465264656504}
+<python>\Lib\site-packages\sklearn\neural_network\_multilayer_perceptron.py:695: UserWarning: Got `batch_size` less than 1 or larger than sample size. It is going to be clipped
+  warnings.warn(
+{'epoch': 14, 'train_log_loss': 0.07494446048952463, 'val_log_loss': 0.1086818468157531}
+<python>\Lib\site-packages\sklearn\neural_network\_multilayer_perceptron.py:695: UserWarning: Got `batch_size` less than 1 or larger than sample size. It is going to be clipped
+  warnings.warn(
+{'epoch': 15, 'train_log_loss': 0.07480322175039984, 'val_log_loss': 0.10990238115114619}
+<python>\Lib\site-packages\sklearn\neural_network\_multilayer_perceptron.py:695: UserWarning: Got `batch_size` less than 1 or larger than sample size. It is going to be clipped
+  warnings.warn(
+{'epoch': 16, 'train_log_loss': 0.07464883934428011, 'val_log_loss': 0.10962651829523722}
+<python>\Lib\site-packages\sklearn\neural_network\_multilayer_perceptron.py:695: UserWarning: Got `batch_size` less than 1 or larger than sample size. It is going to be clipped
+  warnings.warn(
+{'epoch': 17, 'train_log_loss': 0.07533934037935021, 'val_log_loss': 0.1121555235377309}
+<python>\Lib\site-packages\sklearn\neural_network\_multilayer_perceptron.py:695: UserWarning: Got `batch_size` less than 1 or larger than sample size. It is going to be clipped
+  warnings.warn(
+{'epoch': 18, 'train_log_loss': 0.07364642970731798, 'val_log_loss': 0.10875223143809035}
+<python>\Lib\site-packages\sklearn\neural_network\_multilayer_perceptron.py:695: UserWarning: Got `batch_size` less than 1 or larger than sample size. It is going to be clipped
+  warnings.warn(
+{'epoch': 19, 'train_log_loss': 0.07376302385324043, 'val_log_loss': 0.10885664680682394}
+<python>\Lib\site-packages\sklearn\neural_network\_multilayer_perceptron.py:695: UserWarning: Got `batch_size` less than 1 or larger than sample size. It is going to be clipped
+  warnings.warn(
+{'epoch': 20, 'train_log_loss': 0.07338243792161338, 'val_log_loss': 0.10928225877194885}
+<python>\Lib\site-packages\sklearn\neural_network\_multilayer_perceptron.py:695: UserWarning: Got `batch_size` less than 1 or larger than sample size. It is going to be clipped
+  warnings.warn(
+{'epoch': 21, 'train_log_loss': 0.07289409690868924, 'val_log_loss': 0.10920394575765222}
+<python>\Lib\site-packages\sklearn\neural_network\_multilayer_perceptron.py:695: UserWarning: Got `batch_size` less than 1 or larger than sample size. It is going to be clipped
+  warnings.warn(
+{'epoch': 22, 'train_log_loss': 0.0726646174838071, 'val_log_loss': 0.10891552416466653}
+<python>\Lib\site-packages\sklearn\neural_network\_multilayer_perceptron.py:695: UserWarning: Got `batch_size` less than 1 or larger than sample size. It is going to be clipped
+  warnings.warn(
+{'epoch': 23, 'train_log_loss': 0.07235692727760466, 'val_log_loss': 0.10968246035404619}
+<python>\Lib\site-packages\sklearn\neural_network\_multilayer_perceptron.py:695: UserWarning: Got `batch_size` less than 1 or larger than sample size. It is going to be clipped
+  warnings.warn(
+{'epoch': 24, 'train_log_loss': 0.0723036575005982, 'val_log_loss': 0.10871149145434073}
+<python>\Lib\site-packages\sklearn\neural_network\_multilayer_perceptron.py:695: UserWarning: Got `batch_size` less than 1 or larger than sample size. It is going to be clipped
+  warnings.warn(
+{'epoch': 25, 'train_log_loss': 0.073913569629058, 'val_log_loss': 0.11280023155176415}

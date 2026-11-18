@@ -1,0 +1,16 @@
+{
+  "top1_clf": 0.8998589562764457,
+  "top1_hmm": 0.9408138745233244,
+  "continuity_clf": 0.9537510873796494,
+  "continuity_hmm": 0.9788124408719628,
+  "route_precision_clf": 0.7868512563006407,
+  "route_precision_hmm": 0.9781602827816391,
+  "route_recall_clf": 0.9976161832694601,
+  "route_recall_hmm": 0.9965667274633463,
+  "route_f1_clf": 0.8764472694328245,
+  "route_f1_hmm": 0.9871719303956276,
+  "f1_macro_clf": 0.9511662182571223,
+  "f1_macro_hmm": 0.9704216103787529,
+  "decode_s_mean": 0.35512928999960425,
+  "breaks_total": 4
+}
