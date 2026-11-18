@@ -17,6 +17,7 @@ raw .track/.nodes/.arcs ──► cleaning + local metric projection
 | Folder | What is inside |
 |---|---|
 | `pathsnap/` | Library code: `data_io.py` (reading/cleaning), `geo.py` (projection, geometry), `network.py` (spatial index, Dijkstra), `labels.py` (route→observation label alignment), `features.py` (candidates + feature engineering), `models.py` (model zoo), `hmm.py` (HMM/Viterbi + route reconstruction), `metrics.py`, `pipeline.py` (inference + server-side evaluation) |
+| `notebooks/` | **`model_comparison.ipynb`**: all 7 models one by one (CV folds, live student-test scores, confusion matrix) and the full comparison, executed with outputs |
 | `scripts/` | Numbered, reproducible experiment scripts (see below); `scripts/models/train_<model>.py` trains one model at a time |
 | `api/` | FastAPI backend (`api/main.py`), runs on **Laptop 1** |
 | `ui/` | Streamlit evaluator interface (`ui/app.py`), runs on **Laptop 2** |
